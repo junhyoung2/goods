@@ -7,13 +7,13 @@ footer {
     @include flex-layout(row, space-around, center);
     @include base-font;
     margin-bottom: 0.5rem;
-    p{
-        &:nth-of-type(2){
+    p {
+        &:nth-of-type(2) {
             @include bold-font;
         }
     }
 }
-.top-text>p>a:hover{
+.top-text > p > a:hover {
     @include bold-font;
     transition: all 0.3s;
     border-bottom: 1px solid #222;
@@ -22,6 +22,9 @@ footer {
 .icon {
     @include flex-layout(row, center, center);
     gap: 2rem;
+    &:hover {
+        color: var(--color-primary);
+    }
 
     p {
         background-color: var(--color-gray);
@@ -34,13 +37,16 @@ footer {
         text-align: center;
         font-size: 1.5rem;
         cursor: pointer;
+        &:hover {
+            background-color: var(--color-primary);
+        }
     }
 }
 
 ul {
-    @include tablet{
-    @include flex-layout(row,space-between,center);
-    display: flex;
+    @include tablet {
+        @include flex-layout(row, space-between, center);
+        display: flex;
     }
 }
 
@@ -68,14 +74,13 @@ ul {
 .bottom-text {
     margin-top: 2rem;
 
-    >p {
+    > p {
         @include base-font;
         color: var(--color-dark);
     }
 
     @include tablet {
         align-items: flex-end;
-
     }
 }
 
@@ -83,11 +88,9 @@ ul {
     @include flex-layout(row, center, center);
     @include base-font;
 
-
     img {
         margin: 1rem 2rem;
         width: 100px;
         object-fit: cover;
     }
-
 }

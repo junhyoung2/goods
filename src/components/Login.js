@@ -11,8 +11,8 @@ const Login = ({setIsLoggedIn}) => {
 
   const handleLogin = () => {
     if (id.trim() && pw.trim()) {
-      setIsLoggedIn(true); // ✅ 로그인 상태 true
-      navigate("/mypage"); // 마이페이지로 이동
+      setIsLoggedIn(true); 
+      navigate("/mypage"); 
     } else {
       alert("아이디와 비밀번호를 입력하세요.");
     }
